@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPREC Agriculture</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+		<div class="header_title">
+			<h2><img src="assets/gpreclogo.jpg" height="60" width="60" style="margin-bottom:-15px;">&nbsp;GPREC VYAVA<span>SAYAM</span></h2>
+		</div>
+		<ul>
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="agiculture.html">Agriculture</a></li>
+			<li><a href="floriculture.html">Floriculture</a></li>
+			<li><a href="Aquaculture.html">Aquaculture</a></li>
+			<li><a href="">Horticulture</a></li>
+			<li><a href="">Natural Forming</a></li>
+			<li><a href="">Greenhouse Cultivation</a></li>
+			<li><a href="">Technology</a></li>
+		<ul>
+	</div>
+	<br><br><br>
+	<div class="hcontent">
+		<div class="photo">
+		</div>
+		<div class="slideshow-container">
+			<div class="slideshow">
+				<div class="myslides fade">
+					<div class="numbers">1 / 4</div>
+					<div><img src="images/slider4.jpg"width="1000" height="500"></div>
+					<!-- <div class="caption">Text 1</div> -->
+				</div>
+				<div class="myslides fade">
+					<div class="numbers">2 / 4</div>
+					<div><img src="images/slider2.jpg"width="1000" height="500"></div>
+					<!-- <div class="caption">Text 2</div> -->
+				</div>
+					<div class="myslides fade">
+					<div class="numbers">3 / 4</div>
+					<div><img src="images/slider3.jpg"width="1000" height="500"></div>
+					<!-- <div class="caption">Text 3</div> -->
+				</div>
+				<div class="myslides fade">
+					<div class="numbers">4 / 4</div>
+					<div><img src="images/slider1.jpg" width="1000" height="500"></div>
+					<!-- <div class="caption">Text 4</div> -->
+				</div>
+				<div class="btn">
+					<a class="prev" onclick="plusSlides(-1)"><p>&#10094;</p></a>
+					<a class="next" onclick="plusSlides(1)"><p>&#10095;</p></a>
+				<div>
+			</div>
+			<div style="text-align:center;transform: translateY(-30px);">
+					<span class="dots" onclick="currentSlide(1)"></span> 
+					<span class="dots" onclick="currentSlide(2)"></span> 
+					<span class="dots" onclick="currentSlide(3)"></span>
+					<span class="dots" onclick="currentSlide(4)"></span>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var slideIndex = 1;
+// showSlide(slideIndex);
+function plusSlides(n)
+{
+	showSlide(slideIndex += n);
+}
+
+function currentSlide(n) 
+{
+	showSlide(slideIndex = n);
+}
+
+function showSlide(n)
+{
+	var i;
+	var slides = document.getElementsByClassName("myslides");
+	var dots = document.getElementsByClassName("dots");
+	if (n > slides.length) { slideIndex = 1};
+	if (n < 1) { slideIndex = slides.length};
+	for (i=0;i<slides.length;i++) 
+	{
+		slides[i].style.display = "none";
+	};
+
+	for (i=0;i<dots.length;i++) 
+	{
+		dots[i].className = dots[i].className.replace(" actives","");
+	};
+
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " actives";
+
+}
+autoslide();
+
+function autoslide()
+{
+	var i;
+	var slides = document.getElementsByClassName("myslides");
+	var dots = document.getElementsByClassName("dots");
+	if (slideIndex > slides.length) { slideIndex = 1};
+	if (slideIndex < 1) { slideIndex = slides.length};
+	showSlide(slideIndex);
+	slideIndex++;
+	setTimeout(autoslide,3000);
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,43 @@
+{
+    "marigold":
+        {
+            "title":"Marigold",
+            "img" : "images/Marigold_flower.jpg",
+            "content":"Marigold is a commonplace yet one of the most-loved summer flowers in India. The color of marigold flowers could differ from yellow to golden. In India, people use it mainly for wedding floral décor and religious ceremonies. It is not a flower that you could see it as a part of flower bouquets. However, this doesn’t make it any less of a choice or a secondary option. The flower is used as a medicinal herb, it keeps the pests away and it is even used as a food coloring agent. If you want to keep your plants away from bugs and rodents and can’t seem to find a natural way to do this, plant a marigold near them. It is a natural bug repellent." 
+        },
+
+    "lotus":
+        {
+            "title":"Lotus",
+            "img" : "images/Lotus_flower.jpg",
+            "content":"It is a delicate water plant, however, if you have an artificial pond or water stream in your garden, try planting it as it can take the beauty of your garden to another level. The bright white and pink color flowers of lotus prefer shade and are one of the most important elements of Hindu religious ceremonies. It brings prosperity and wealth to the recipient. It is also the national flower of our country. The petals of flowers open in dawn and start closing from the afternoon. By evening, the petals are completely closed." 
+        },
+
+    "rose":
+        {
+            "title":"Rose",
+            "img" : "images/rose_flower.jpg",
+            "content":"This woody perennial summer flower has songs and paeans written about it. It is a flower of love and passion, reverence, and gratitude and it has a special knack of expressing myriads of emotions that thousands of words can’t explain. The plant can be susceptible to diseases and pests and needs high maintenance. You need to take proper care of it if you want to bask in the pleasant smell of roses in the next season of summer. Available in red, yellow and white, roses can bring a colorful cheer to your garden." 
+        },
+
+    "hibiscus":
+        {
+            "title":"Hibiscus",
+            "img" : "images/Hibiscus_flowers.jpg",
+            "content":"The gorgeous and delicate hibiscus flowers are the signature flower of subtropical regions If you look closely, it is difficult to find a tropical painting that doesn’t have a woman with this flower braided in her hair. This flower can sabotage the space a bit and so it is better to plant it where it receives ample sunlight and has plenty of room to grow. The plant has blooming season year after year so, you don’t have to mulch or preserve the seeds." 
+        },
+    
+    "lilly":
+        {
+            "title":"Lilly",
+            "img" : "images/lilies_flower.jpg",
+            "content":"Don’t be deceived by the delicate look of lilies because this flower puts up a tough fight and withstand extreme weather conditions. In winter, the plant withers and leaves wilt yet the bulbs remain alive but dormant. These bulbs give you flowers in the next season. Lilies look delicate but are low on maintenance and should definitely find a space in your garden." 
+        },
+    
+    "sunflower":
+        {
+            "title":"Sunflower",
+            "img" : "images/Sunflower_flower.jpg",
+            "content":"There can’t be a better example of summer flowers than this. This is a flower that follows the sun everywhere! And summer sun in India, as we all know, can be quite daunting and unforgiving. This beautiful flower has a bright yellow color and gives your garden canvas a vibrant appeal. It can survive through the extreme phase of heat as well. However, be careful not to overwater and keep the soil well-drained." 
+        }
+}

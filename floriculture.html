@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPREC VYAVASAYAM</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+		<div class="header_title">
+			<h2><img src="assets/gpreclogo.jpg" height="60" width="60" style="margin-bottom:-15px;">&nbsp;GPREC VYAVA<span>SAYAM</span></h2>
+		</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="agiculture.html">Agriculture</a></li>
+			<li class="active"><a href="floriculture.html">Floriculture</a></li>
+			<li><a href="Aquaculture.html">Aquaculture</a></li>
+			<li><a href="">Horticulture</a></li>
+			<li><a href="">Natural Forming</a></li>
+			<li><a href="">Greenhouse Cultivation</a></li>
+			<li><a href="">Technology</a></li>
+		<ul>
+	</div>
+	<div class="content">
+		<div class="list">
+			<ul>
+				<li><button id="marigold" onclick="getdata('marigold')">Marigold</button></li>
+				<li><button id="lotus" onclick="getdata('lotus')">Lotus</button></li>
+				<li><button id="sunflower" onclick="getdata('sunflower')">Sunflower</button></li>
+				<li><button id="rose" onclick="getdata('rose')">Rose</button></li>
+				<li><button id="lilly" onclick="getdata('lilly')">Lilly</button></li>
+				<li><button id="hibiscus" onclick="getdata('hibiscus')">Hibiscus</button></li>
+				<li><button id="chysanthemum" onclick="getdata('chysanthemum')">Chrysanthemum</button></li>
+			</ul>
+		</div>
+		<br><br><br>
+		<div id="details">
+			<div id="title"><h3 id="title_name"></h3></div><br>
+			<div id="flower_img">
+				<img width="100%" height="100%" id="Image">
+			</div><br>
+			<div id="flower_details"><p id="details_content"></p></div><br><Br>
+			<div >
+				<iframe class="wmx100" frameborder="0" height="375" src="" width="660"></iframe>  
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+	$(document).ready(function(){
+		$.getJSON('flowers.json',function(data)
+		{
+			$('#title_name').text(data.marigold.title);
+			$("#Image").attr('src',data.marigold.img);
+			$('#details_content').text(data.marigold.content);
+		});
+	});
+
+
+	function getdata(item)
+	{
+		var itemname = item;
+		console.log(itemname);
+		$.getJSON('flowers.json',function(data)
+		{
+			$.each(data,function(key, value){
+				console.log(key);
+				if(key == item)
+				{
+					$('#title_name').text(value.title);
+					$("#Image").attr('src',value.img);
+					$('#details_content').text(value.content);
+				}
+				// else
+				// {
+				// 	$('#title_name').text('Data not Found');
+				// 	$("#Image").removeAttr('src');
+				// 	$('#details_content').text("");
+				// }
+			});
+		});	
+	}
+
+
+	// $('#marigold').on('click',function()
+	// {
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.marigold.title);
+	// 		$("#Image").attr('src',data.marigold.img);
+	// 		$('#details_content').text(data.marigold.content);
+	// 	});
+	// });
+	// $('#lotus').on('click',function(){
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.lotus.title);
+	// 		$("#Image").attr('src',data.lotus.img);
+	// 		$('#details_content').text(data.lotus.content);
+	// 	});
+	// });
+	// $('#sunflower').on('click',function(){
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.sunflower.title);
+	// 		$("#Image").attr('src',data.sunflower.img);
+	// 		$('#details_content').text(data.sunflower.content);
+	// 	});
+	// });
+	// $('#rose').on('click',function(){
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.rose.title);
+	// 		$("#Image").attr('src',data.rose.img);
+	// 		$('#details_content').text(data.rose.content);
+	// 	});
+	// });
+	// $('#hibiscus').on('click',function(){
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.hibiscus.title);
+	// 		$("#Image").attr('src',data.hibiscus.img);
+	// 		$('#details_content').text(data.hibiscus.content);
+	// 	});
+	// });
+	// $('#lilly').on('click',function(){
+	// 	$.getJSON('flowers.json',function(data)
+	// 	{
+	// 		$('#title_name').text(data.lilly.title);
+	// 		$("#Image").attr('src',data.lilly.img);
+	// 		$('#details_content').text(data.lilly.content);
+	// 	});
+	// });
+</script>
+
+</body>
+</html>
